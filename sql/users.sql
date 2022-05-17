@@ -1,6 +1,6 @@
 CREATE TABLE users (
   id SERIAL UNIQUE,
-  name varchar(100)
+  name varchar(100),
   password varchar(100)
 );
 
