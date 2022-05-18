@@ -2,6 +2,18 @@
 
 ## How to use
 
+Configure environment variables:
+
+```
+cp .envsample .env
+cp .env.sh.example .env.sh
+```
+
+Update $PG_URI in .env to have the correct URI for your postgres database
+
+Update $PGPASSWORD in .env.sh with the correct password
+
+
 Install it and run:
 
 ```sh
@@ -9,25 +21,20 @@ npm install
 npm run dev
 ```
 
-or:
+To open a psql shell for the production database, run:
 
-<!-- #default-branch-switch -->
+```
+./scripts/connect.sh
+```
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/nextjs)
+Note, the above requires you have the postgres client `psql` installed.
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/nextjs)
 
 ## The idea behind the example
 
 The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
 It includes `@mui/material` and its peer dependencies, including `emotion`, the default style engine in MUI v5.
 If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
-
-## The link component
-
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with MUI.
-More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
 
 ## What's next?
 
