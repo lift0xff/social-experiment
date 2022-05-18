@@ -2,7 +2,9 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import sql from "../../../lib/db";
 
+const secret = process.env.NEXTAUTH_SECRET;
 export default NextAuth({
+  secret: secret,
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")
