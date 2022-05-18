@@ -2,6 +2,8 @@
 
 ## How to use
 
+First, install nodejs > 14  and < 18.
+
 Configure environment variables:
 
 ```
